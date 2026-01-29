@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лор | Minecraft Meme Universe</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
+    <style>
+        .page-title {
+            text-align: center;
+            color: var(--mc-green);
+            margin: 2rem 0;
+            font-size: 2.5rem;
+        }
+        
+        .lore-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: var(--mc-light-gray);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .lore-timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.5s ease;
+        }
+        
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+            transform: translateX(50px);
+        }
+        
+        .timeline-item:nth-child(even).visible {
+            transform: translateX(0);
+        }
+        
+        .timeline-content {
+            flex: 1;
+            padding: 2rem;
+            background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+            border-radius: 10px;
+            border-left: 5px solid var(--mc-green);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            border-left: none;
+            border-right: 5px solid var(--mc-blue);
+        }
+        
+        .timeline-year {
+            font-size: 1.8rem;
+            color: var(--mc-green);
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        
+        .timeline-title {
+            color: var(--mc-blue);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .timeline-description {
+            color: var(--mc-light-gray);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .lore-secrets {
+            background: rgba(65, 105, 225, 0.1);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 3rem auto;
+            max-width: 800px;
+            border: 2px solid var(--mc-blue);
+        }
+        
+        .secret-item {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border-left: 4px solid var(--mc-green);
+        }
+        
+        .secret-question {
+            color: var(--mc-green);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .secret-answer {
+            color: var(--mc-light-gray);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .secret-answer.open {
+            max-height: 500px;
+            margin-top: 1rem;
+        }
+        
+        .toggle-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .toggle-icon.open {
+            transform: rotate(180deg);
+        }
+        
+        .lore-characters {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .character-card {
+            background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .character-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--mc-green);
+        }
+        
+        .character-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .character-name {
+            color: var(--mc-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .character-role {
+            color: var(--mc-green);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .character-description {
+            color: var(--mc-light-gray);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Minecraft Meme Logo" class="logo-img">
+                <h1 class="logo-text">Minecraft Meme Universe</h1>
+            </div>
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="memes.html">Мемы</a></li>
+                    <li><a href="lore.html" class="active">Лор</a></li>
+                    <li><a href="guides.html">Гайды</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+                <button class="nav-toggle" id="navToggle">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">📖 Тайный Лор Minecraft</h1>
+        
+        <div class="lore-intro">
+            <p>За кубическими пейзажами Minecraft скрывается глубокая и загадочная история. 
+            От древних цивилизаций до таинственных существ — погрузитесь в лор вселенной!</p>
+        </div>
+        
+        <section class="lore-timeline" id="timeline">
+            <h2 style="text-align: center; color: var(--mc-blue); margin-bottom: 2rem;">⏳ Хронология мира</h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">Эра Строителей</div>
+                    <h3 class="timeline-title">Древние цивилизации</h3>
+                    <p class="timeline-description">
+                        Задолго до появления игроков мир населяли древние расы, 
+                        построившие крепости, подземные города и храмы в джунглях. 
+                        Что с ними случилось? Никто не знает...
+                    </p>
+                    <ul style="color: var(--mc-light-gray); padding-left: 1.5rem;">
+                        <li>Строители Крепостей</li>
+                        <li>Создатели Храмов</li>
+                        <li>Подземные жители</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">Эра Изгоев</div>
+                    <h3 class="timeline-title">Поражение Эндер-дракона</h3>
+                    <p class="timeline-description">
+                        Легенда гласит, что когда-то существовали могучие воины, 
+                        победившие Эндер-дракона и забравшие его яйцо. 
+                        Но цена победы была велика...
+                    </p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">Эра Исследователей</div>
+                    <h3 class="timeline-title">Открытие новых измерений</h3>
+                    <p class="timeline-description">
+                        Смельчаки обнаружили порталы в Нижний мир и Энд. 
+                        Эти открытия изменили мир навсегда, принеся новые ресурсы 
+                        и страшных существ.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="lore-secrets">
+            <h2 style="text-align: center; color: var(--mc-green); margin-bottom: 2rem;">🤫 Секреты и теории</h2>
+            
+            <div class="secret-item">
+                <div class="secret-question" onclick="toggleSecret(this)">
+                    Почему эндермены носят блоки?
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="secret-answer">
+                    <p>Согласно одной из теорий, эндермены — это бывшие строители, 
+                    которые были прокляты и теперь бесцельно носят блоки в память о своих творениях.</p>
+                </div>
+            </div>
+            
+            <div class="secret-item">
+                <div class="secret-question" onclick="toggleSecret(this)">
+                    Кто построил древние города?
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="secret-answer">
+                    <p>Древние города в Deep Dark были построены расой, которая боялась Скулька. 
+                    Они создали механизмы для его обнаружения, но в итоге были уничтожены.</p>
+                </div>
+            </div>
+            
+            <div class="secret-item">
+                <div class="secret-question" onclick="toggleSecret(this)">
+                    Что такое Herobrine?
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="secret-answer">
+                    <p>Herobrine — легендарная фигура, призрак бывшего игрока или создателя мира. 
+                    Хотя официально он не существует, многие игроки клянутся, что видели его.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="lore-characters">
+            <h2 style="grid-column: 1 / -1; text-align: center; color: var(--mc-blue); margin-bottom: 1rem;">
+                🎭 Легендарные существа
+            </h2>
+            
+            <div class="character-card">
+                <div class="character-icon">👁️</div>
+                <h3 class="character-name">Эндермен</h3>
+                <div class="character-role">Хранитель Энда</div>
+                <p class="character-description">
+                    Загадочное существо, способное телепортироваться. 
+                    Атакует только если на него смотреть в глаза.
+                </p>
+            </div>
+            
+            <div class="character-card">
+                <div class="character-icon">💎</div>
+                <h3 class="character-name">Странствующий торговец</h3>
+                <div class="character-role">Кочевник-продавец</div>
+                <p class="character-description">
+                    Появляется с двумя ламами и предлагает редкие товары. 
+                    Откуда он берется — одна из величайших тайн.
+                </p>
+            </div>
+            
+            <div class="character-card">
+                <div class="character-icon">👻</div>
+                <h3 class="character-name">Фантом</h3>
+                <div class="character-role">Ночной охотник</div>
+                <p class="character-description">
+                    Появляется если игрок долго не спит. 
+                    Некоторые считают, что это души неупокоенных строителей.
+                </p>
+            </div>
+            
+            <div class="character-card">
+                <div class="character-icon">🏹</div>
+                <h3 class="character-name">Пиглин</h3>
+                <div class="character-role">Житель Нижнего мира</div>
+                <p class="character-description">
+                    Древняя раса, когда-то бывшая свиньями. 
+                    Обожают золото и ненавидят, когда их роняют.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" id="contact">
+        <!-- Такой же футер как в index.html -->
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/lore.js"></script>
+    <script>
+        // Функция для раскрытия секретов
+        function toggleSecret(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.toggle-icon');
+            
+            answer.classList.toggle('open');
+            icon.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
