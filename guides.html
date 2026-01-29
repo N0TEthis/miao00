@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤣 Несерьезные Minecraft Гайды | Minecraft Meme Universe</title>
+    <link rel="stylesheet" href="css/guides.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <style>
+        /* Инлайн стили для быстрой загрузки */
+        :root {
+            --mc-primary: #4CAF50;
+            --mc-secondary: #2196F3;
+            --mc-accent: #FF9800;
+            --mc-warning: #FF5722;
+            --mc-light: #FFFFFF;
+            --mc-bg: #F8F9FA;
+            --mc-card: #FFFFFF;
+            --mc-border: #E0E0E0;
+            --mc-text: #333333;
+            --mc-text-light: #666666;
+            --mc-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --mc-radius: 16px;
+        }
+        
+        body.light-theme {
+            background-color: var(--mc-bg);
+            color: var(--mc-text);
+            font-family: 'Comic Neue', cursive;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <!-- Шапка -->
+    <header class="guides-header">
+        <div class="container">
+            <div class="header-top">
+                <a href="index.html" class="back-btn">
+                    ⬅️ На главную
+                </a>
+                <button class="theme-toggle" id="themeToggle" title="Сменить тему">
+                    🌙
+                </button>
+            </div>
+            
+            <div class="hero-section">
+                <div class="hero-icon">📚</div>
+                <h1 class="page-title">🤣 Minecraft Гайды для Чайников</h1>
+                <p class="page-subtitle">(и для тех, кто думает, что они профи)</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">0%</div>
+                        <div class="stat-label">Полезности</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Смеха</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">42</div>
+                        <div class="stat-label">Бесполезных совета</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 73%">
+                    <span class="progress-text">73% шанс выжить</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="guides-main">
+        <div class="container">
+            <!-- Навигация по гайдам -->
+            <nav class="guides-nav">
+                <div class="nav-category">
+                    <span class="nav-icon">🏕️</span>
+                    <h3>Выживание</h3>
+                    <a href="#survival" class="nav-link active">Первая ночь</a>
+                    <a href="#building" class="nav-link">Строительство</a>
+                    <a href="#mobs" class="nav-link">Мобы</a>
+                </div>
+                
+                <div class="nav-category">
+                    <span class="nav-icon">⚡</span>
+                    <h3>Продвинутое</h3>
+                    <a href="#redstone" class="nav-link">Красный камень</a>
+                    <a href="#farms" class="nav-link">Фермы</a>
+                    <a href="#enchanting" class="nav-link">Зачарование</a>
+                </div>
+                
+                <div class="nav-category">
+                    <span class="nav-icon">🎮</span>
+                    <h3>Развлечения</h3>
+                    <a href="#memes" class="nav-link">Мемы</a>
+                    <a href="#jokes" class="nav-link">Шутки</a>
+                    <a href="#fun-facts" class="nav-link">Факты</a>
+                </div>
+            </nav>
+
+            <!-- Основной контент -->
+            <div class="guides-content">
+                <!-- Гайд 1: Выживание -->
+                <article class="guide-card" id="survival">
+                    <div class="guide-header">
+                        <div class="guide-meta">
+                            <span class="difficulty beginner">Для нубов</span>
+                            <span class="time-estimate">⏱️ 5 минут (читайте быстро!)</span>
+                        </div>
+                        <h2 class="guide-title">Как выжить первую ночь (и не сойти с ума)</h2>
+                        <p class="guide-subtitle">Шаг 1: Не умирать. Шаг 2: См. Шаг 1</p>
+                    </div>
+
+                    <div class="guide-body">
+                        <!-- Шаг 1 -->
+                        <div class="guide-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>День 1: Паника и дерево</h3>
+                                <p><strong>Ситуация:</strong> Вы появились в незнакомом квадратном мире. Вокруг трава, деревья и полное непонимание что делать.</p>
+                                
+                                <div class="step-tip success">
+                                    <span class="tip-icon">💡</span>
+                                    <div class="tip-content">
+                                        <strong>Профессиональный совет:</strong> Не стойте на месте! Особенно если рядом вода — могут появиться утопленники с трезубцами.
+                                    </div>
+                                </div>
+                                
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-lang">Minecraft Алгоритм</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">📋</button>
+                                    </div>
+                                    <pre><code>1. Ударить дерево рукой (ощущения незабываемые)
+2. Сделать верстак (4 доски = магия!)
+3. Создать деревянную кирку (уже почти профессионал)
+4. Найти овец (они милые и дают шерсть)
+5. Построить "дом" (читай: холм с дырой)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Шаг 2 -->
+                        <div class="guide-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Вечер: Строительство "убежища"</h3>
+                                <p><strong>Критически важно:</strong> К ночи нужно иметь хоть какое-то укрытие. Мобы не архитектурные критики, им главное чтобы было темно.</p>
+                                
+                                <div class="comparison-grid">
+                                    <div class="comparison-good">
+                                        <h4>✅ Правильный подход</h4>
+                                        <ul>
+                                            <li>Выкопать пещеру в холме</li>
+                                            <li>Поставить дверь (очень важно!)</li>
+                                            <li>Факелы везде, даже на потолке</li>
+                                            <li>Кровать для пропуска ночи</li>
+                                        </ul>
+                                    </div>
+                                    <div class="comparison-bad">
+                                        <h4>❌ Как делают нубы</h4>
+                                        <ul>
+                                            <li>Стоят на столбе из земли</li>
+                                            <li>Строят стеклянный дом</li>
+                                            <li>Забывают про крышу</li>
+                                            <li>Спят без кровати</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="warning-box">
+                                    <span class="warning-icon">⚠️</span>
+                                    <div class="warning-content">
+                                        <strong>ВАЖНО!</strong> Если слышите "тсссс" — это не чайник. Это крипер. Бегите. Нет, быстрее. ЕЩЕ БЫСТРЕЕ!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Шаг 3 -->
+                        <div class="guide-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Ночь: Искусство прокрастинации</h3>
+                                <p>Вы в безопасности (надеемся). Теперь можно заняться "полезными" делами:</p>
+                                
+                                <div class="checklist">
+                                    <h4>📋 Чек-лист "Чем заняться ночью"</h4>
+                                    <label class="check-item">
+                                        <input type="checkbox" checked onclick="toggleCheck(this)">
+                                        <span class="check-text">Переплавить руду в печи</span>
+                                    </label>
+                                    <label class="check-item">
+                                        <input type="checkbox" onclick="toggleCheck(this)">
+                                        <span class="check-text">Сортировать инвентарь</span>
+                                    </label>
+                                    <label class="check-item">
+                                        <input type="checkbox" onclick="toggleCheck(this)">
+                                        <span class="check-text">Составить план на завтра</span>
+                                    </label>
+                                    <label class="check-item">
+                                        <input type="checkbox" onclick="toggleCheck(this)">
+                                        <span class="check-text">Просто смотреть в окно</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="pro-tip">
+                                    <div class="pro-icon">👑</div>
+                                    <div class="pro-content">
+                                        <h4>Про-лайфхак:</h4>
+                                        <p>Если построить дом рядом с деревней, можно наблюдать как зомби атакуют жителей. Бесплатное развлечение + уроки выживания!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-footer">
+                        <div class="success-rate">
+                            <h4>Ваш шанс выжить:</h4>
+                            <div class="rate-display">
+                                <div class="rate-bar">
+                                    <div class="rate-fill" style="width: 73%"></div>
+                                </div>
+                                <span class="rate-percent">73%</span>
+                            </div>
+                            <p class="rate-note">*Если не пытаться подружиться с крипером</p>
+                        </div>
+                        
+                        <div class="guide-actions">
+                            <button class="btn btn-like" onclick="likeGuide('survival')">
+                                👍 Полезно! <span class="count">248</span>
+                            </button>
+                            <button class="btn btn-share" onclick="shareGuide()">
+                                📤 Поделиться
+                            </button>
+                            <button class="btn btn-save" onclick="saveGuide()">
+                                💾 Сохранить
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Гайд 2: Строительство -->
+                <article class="guide-card" id="building">
+                    <div class="guide-header">
+                        <div class="guide-meta">
+                            <span class="difficulty intermediate">Для мечтателей</span>
+                            <span class="time-estimate">⏱️ Вечность (минимум)</span>
+                        </div>
+                        <h2 class="guide-title">Как построить нечто, отдаленно напоминающее дом</h2>
+                        <p class="guide-subtitle">От землянки до "ой, какая архитектура!" за 1000 часов</p>
+                    </div>
+
+                    <div class="guide-body">
+                        <div class="style-selector">
+                            <h3>🎨 Выберите свой стиль</h3>
+                            <div class="style-options">
+                                <label class="style-option">
+                                    <input type="radio" name="style" checked onclick="changeStyle('modern')">
+                                    <div class="option-card">
+                                        <span class="option-icon">🏢</span>
+                                        <h4>Модерн</h4>
+                                        <p>Много стекла, четкие линии, выглядит как офис Google</p>
+                                    </div>
+                                </label>
+                                
+                                <label class="style-option">
+                                    <input type="radio" name="style" onclick="changeStyle('medieval')">
+                                    <div class="option-card">
+                                        <span class="option-icon">🏰</span>
+                                        <h4>Средневековье</h4>
+                                        <p>Камни, факелы, выглядит как замок после набега варваров</p>
+                                    </div>
+                                </label>
+                                
+                                <label class="style-option">
+                                    <input type="radio" name="style" onclick="changeStyle('fantasy')">
+                                    <div class="option-card">
+                                        <span class="option-icon">🧙</span>
+                                        <h4>Фэнтези</h4>
+                                        <p>Башни, мосты, выглядит как у мага после вечеринки</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="building-tips">
+                            <h3>🔨 Строительные хитрости</h3>
+                            <div class="tips-grid">
+                                <div class="tip-card">
+                                    <div class="tip-icon">📐</div>
+                                    <h4>Симметрия — ваш друг</h4>
+                                    <p>Пока не сделаете асимметрично. Тогда это "артхаус" и "индивидуальный стиль"</p>
+                                </div>
+                                
+                                <div class="tip-card">
+                                    <div class="tip-icon">🎨</div>
+                                    <h4>Цветовая гамма</h4>
+                                    <p>Булыжник+доски = классика. Земля+песок = кризис жанра</p>
+                                </div>
+                                
+                                <div class="tip-card">
+                                    <div class="tip-icon">💡</div>
+                                    <h4>Освещение</h4>
+                                    <p>Факелы везде. Даже на потолке. Особенно на потолке. Мобы ненавидят свет</p>
+                                </div>
+                                
+                                <div class="tip-card">
+                                    <div class="tip-icon">🏠</div>
+                                    <h4>Размер имеет значение</h4>
+                                    <p>Маленький дом = уютно. Большой дом = пусто и грустно. Выбирайте золотую середину</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inspiration-comparison">
+                            <div class="inspiration-plan">
+                                <h4>📝 План в голове:</h4>
+                                <div class="plan-drawing">
+                                    <div class="drawing">
+                                        <pre>
+     /\
+    /  \
+   /    \
+  /______\
+ |        |
+ |        |
+ |________|
+                                        </pre>
+                                    </div>
+                                    <p>Замок Хогвартс с 20 комнатами</p>
+                                </div>
+                            </div>
+                            
+                            <div class="inspiration-arrow">➡️</div>
+                            
+                            <div class="inspiration-reality">
+                                <h4>🎯 Реальность:</h4>
+                                <div class="reality-drawing">
+                                    <div class="drawing">
+                                        <pre>
+   ____
+  |    |
+  |____|
+                                        </pre>
+                                    </div>
+                                    <p>Коробка 4x4 с одним окном</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-quote">
+                        <blockquote>
+                            "Любое строительство начинается с коробки. Великие архитекторы просто умеют это скрывать"
+                            <footer>— Неизвестный строитель, чей дом взорвал крипер</footer>
+                        </blockquote>
+                    </div>
+                </article>
+
+                <!-- Мини-гайды -->
+                <section class="mini-guides">
+                    <h2 class="section-title">⚡ Быстрые советы (на 30 секунд)</h2>
+                    <div class="mini-grid">
+                        <div class="mini-card">
+                            <h3>Как найти алмазы</h3>
+                            <ol>
+                                <li>Копайте на уровне 12 (Y=12)</li>
+                                <li>Используйте железную кирку или лучше</li>
+                                <li>На самом деле это просто удача</li>
+                            </ol>
+                            <div class="mini-tip">💎 Совет: Кричите "БИНГО!" когда найдете</div>
+                        </div>
+                        
+                        <div class="mini-card">
+                            <h3>Как приручить волка</h3>
+                            <ul>
+                                <li>Найдите в тайге или снежном биоме</li>
+                                <li>Дайте кость (не свою!)</li>
+                                <li>Не смотрите в глаза (это важно!)</li>
+                                <li>Назовите его "Хороший мальчик"</li>
+                            </ul>
+                            <div class="mini-tip">🐺 Осторожно: Может съесть вашу курицу</div>
+                        </div>
+                        
+                        <div class="mini-card">
+                            <h3>Как победить Эндер Дракона</h3>
+                            <ol>
+                                <li>Соберите команду (или будьте смелым одиночкой)</li>
+                                <li>Возьмите луки, зелья, еду</li>
+                                <li>Уничтожьте кристаллы</li>
+                                <li>На самом деле смотрите гайды на YouTube</li>
+                            </ol>
+                            <div class="mini-tip">🐉 Подсказка: Кристаллы. Всегда кристаллы</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Интерактивный тест -->
+                <section class="quiz-section">
+                    <h2 class="section-title">🧠 Проверь свои знания!</h2>
+                    <div class="quiz-container">
+                        <div class="quiz-question active" id="q1">
+                            <h3>Вопрос 1: Что делать если на вас летит крипер?</h3>
+                            <div class="quiz-options">
+                                <label class="option">
+                                    <input type="radio" name="q1" value="a">
+                                    <span class="option-text">Бежать, крича "МАМА!"</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="q1" value="b">
+                                    <span class="option-text">Ударить мечом (смельчак!)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="q1" value="c">
+                                    <span class="option-text">Принять судьбу (это был хороший дом)</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="quiz-question" id="q2">
+                            <h3>Вопрос 2: Сколько алмазов нужно для полного набора?</h3>
+                            <div class="quiz-options">
+                                <label class="option">
+                                    <input type="radio" name="q2" value="a">
+                                    <span class="option-text">24 (математика!)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="q2" value="b">
+                                    <span class="option-text">Все что найдете (жадность!)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="q2" value="c">
+                                    <span class="option-text">Нисколько (деревянный меч - это стиль)</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="quiz-controls">
+                            <button class="btn btn-prev" onclick="prevQuestion()">← Назад</button>
+                            <button class="btn btn-next" onclick="nextQuestion()">Далее →</button>
+                            <button class="btn btn-submit" onclick="submitQuiz()">Проверить! 🎯</button>
+                        </div>
+                        
+                        <div class="quiz-result" id="quizResult">
+                            <div class="result-header">
+                                <h3>Ваш Minecraft IQ:</h3>
+                                <div class="iq-score" id="iqScore">???</div>
+                            </div>
+                            <p class="result-comment" id="resultComment">Загрузка гениальности...</p>
+                            <button class="btn btn-retry" onclick="retryQuiz()">🔄 Попробовать снова</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="guides-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📢 Важное объявление!</h3>
+                    <p>Эти гайды созданы исключительно для развлечения. Для серьезных советов посетите <a href="https://minecraft.wiki" target="_blank" class="wiki-link">официальную вики</a>.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>🔜 Скоро будет:</h3>
+                    <ul class="upcoming-list">
+                        <li>"Как построить лифт на слизи, который не убьет вас"</li>
+                        <li>"Секреты торговли с жителями: как не остаться без штанов"</li>
+                        <li>"Ферма всего: от морковки до опыта"</li>
+                    </ul>
+                    <button class="btn btn-subscribe" onclick="subscribeNews()">
+                        🔔 Подписаться на обновления
+                    </button>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 Minecraft Meme University. Дипломы не выдаем, но смеемся громко!</p>
+                <p class="disclaimer">
+                    ⚠️ Предупреждение: Следование этим гайдам может привести к потере дома, сна и рассудка. 
+                    Но будет весело и запоминающе!
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка наверх -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+        ⬆️
+    </button>
+
+    <script src="js/guides.js"></script>
+</body>
+</html>
